@@ -39,7 +39,6 @@ const employeeItems = [
   "Tracey",
 ];
 
-// Questions for the application (questions taken from spec video)
 const dropDown = [
   {
     type: "list",
@@ -56,8 +55,6 @@ const dropDown = [
     ],
   },
 ];
-
-// make a function for inquirer --> inquirer.prompt()
 
 function inquirerQuestions() {
   inquirer.prompt(dropDown).then((data) => {
@@ -98,7 +95,6 @@ function inquirerQuestions() {
     }
   });
 }
-// the questions once the specified drop down has been selected
 
 const addEmployeeDropDown = [
   {
@@ -156,7 +152,6 @@ const addDepartmentDropDown = [
   },
 ];
 
-// directing the selections from the command lines to the dropdown questions (inquirer)
 function addRole() {
   inquirer.prompt(addRoleDropDown).then((data) => {
     const roleName = JSON.stringify(data.roleName).split("").join("");
